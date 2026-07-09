@@ -1,0 +1,32 @@
+body{
+    background:#eef2f7;
+}
+
+.dashboard{
+    max-width:900px;
+    margin:auto;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.validation-success{
+    color:green;
+    font-weight:bold;
+}
+
+.validation-error{
+    color:red;
+    font-weight:bold;
+}
+
+textarea{
+    resize:none;
+}
