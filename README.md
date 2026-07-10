@@ -227,7 +227,7 @@ Access Protected APIs
 ## Clone Repository
 
 ```bash
-git clone repository-url>](https://github.com/Winstar444/social-post-composer
+git clone https://github.com/Winstar444/social-post-composer
 ```
 
 ---
