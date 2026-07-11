@@ -6,7 +6,7 @@ import authRoutes from "./routes/authRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 
 dotenv.config();
-
+console.log(process.env);
 connectDB();
 
 const app = express();
