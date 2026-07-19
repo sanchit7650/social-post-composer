@@ -9,17 +9,26 @@ function Dashboard() {
     <>
       <Navbar />
 
-      <div className="container dashboard">
+      <div className="dashboard-container">
 
-        <div className="card shadow p-4 mb-4">
-
-          <PostForm />
-
+        <div className="dashboard-header">
+          <div>
+            <h2>Welcome 👋</h2>
+            <p>Create and manage social media posts.</p>
+          </div>
         </div>
 
-        <div className="card shadow p-4">
+        <div className="dashboard-grid">
 
-          <PostList />
+          <div className="dashboard-card">
+            <h4>Create New Post</h4>
+            <PostForm />
+          </div>
+
+          <div className="dashboard-card">
+            <h4>Recent Posts</h4>
+            <PostList />
+          </div>
 
         </div>
 

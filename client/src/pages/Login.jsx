@@ -25,8 +25,6 @@ function Login() {
 
       localStorage.setItem("token", res.data.token);
 
-      alert("Login Successful");
-
       navigate("/dashboard");
     } catch (error) {
       alert(error.response?.data?.message || "Login Failed");
@@ -34,63 +32,72 @@ function Login() {
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center vh-100">
+    <div className="container-fluid vh-100">
 
-      <div className="card shadow p-4" style={{ width: "420px", borderRadius: "15px" }}>
+      <div className="row h-100">
 
-        <h2 className="text-center mb-4">
-          📱 Social Post Composer
-        </h2>
+        <div className="col-md-6 d-none d-md-flex bg-primary text-white justify-content-center align-items-center">
 
-        <h4 className="text-center mb-4">
-          Login
-        </h4>
+          <div className="text-center px-5">
+            <h1 className="fw-bold">Social Post Composer</h1>
 
-        <form onSubmit={handleSubmit}>
+            <p className="mt-3">
+              Create posts for multiple platforms with live validation.
+            </p>
+          </div>
 
-          <div className="mb-3">
+        </div>
 
-            <label>Email</label>
+        <div className="col-md-6 d-flex justify-content-center align-items-center bg-light">
 
-            <input
-              type="email"
-              className="form-control"
-              name="email"
-              placeholder="Enter Email"
-              onChange={handleChange}
-              required
-            />
+          <div
+            className="bg-white p-5 shadow rounded-4"
+            style={{ width: "400px" }}
+          >
+            <h3 className="mb-4 text-center">Login</h3>
+
+            <form onSubmit={handleSubmit}>
+
+              <div className="mb-3">
+                <label>Email</label>
+
+                <input
+                  type="email"
+                  className="form-control"
+                  name="email"
+                  placeholder="Enter Email"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <label>Password</label>
+
+                <input
+                  type="password"
+                  className="form-control"
+                  name="password"
+                  placeholder="Enter Password"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <button className="btn btn-primary w-100">
+                Login
+              </button>
+
+            </form>
+
+            <p className="text-center mt-4">
+              Don't have an account?
+              <Link to="/register"> Register</Link>
+            </p>
 
           </div>
 
-          <div className="mb-3">
-
-            <label>Password</label>
-
-            <input
-              type="password"
-              className="form-control"
-              name="password"
-              placeholder="Enter Password"
-              onChange={handleChange}
-              required
-            />
-
-          </div>
-
-          <button className="btn btn-primary w-100">
-            Login
-          </button>
-
-        </form>
-
-        <p className="text-center mt-3">
-
-          Don't have an account?
-
-          <Link to="/register"> Register</Link>
-
-        </p>
+        </div>
 
       </div>
 
