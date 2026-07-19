@@ -101,21 +101,26 @@ function PostForm() {
 
       <h5>Select Platforms</h5>
 
-      <div className="form-check">
+      {["Twitter", "LinkedIn", "Instagram", "Facebook"].map((platform) => (
+  <div
+    key={platform}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "10px",
+      marginBottom: "10px",
+    }}
+  >
+    <input
+      type="checkbox"
+      value={platform}
+      checked={platforms.includes(platform)}
+      onChange={handlePlatformChange}
+    />
 
-        <input
-          className="form-check-input"
-          type="checkbox"
-          value="Twitter"
-          checked={platforms.includes("Twitter")}
-          onChange={handlePlatformChange}
-        />
-
-        <label className="form-check-label">
-          Twitter
-        </label>
-
-      </div>
+    <label>{platform}</label>
+  </div>
+))}
 
       <div className="form-check">
 
